@@ -1,45 +1,11 @@
-title = "PvPaissa - FFXIV PvP Resource and Community"
+title = "PvPaissa - A FFXIV PvP Resource and Community"
 url = "/"
-layout = "pvpaissa"
+layout = "index"
 description = "A Final Fantasy XIV PvP resource and community."
 meta_title = "PvPaissa"
 meta_description = "A FFXIV PvP Resource and Community."
 is_hidden = 0
 
-[Cleanse\News\Components\Carousel newsPvPaissaCarousel]
-carouselCategoryFilter = "featured"
-carouselPostsPerPage = 4
-carouselCategoryPage = "article/category"
-carouselPostPage = "article/article"
-
-[Cleanse\News\Components\Summarized newsFrontOneSummary]
-categoryFilter = "news"
-postsPerPage = 2
-noPostsMessage = "No posts found"
-sortOrder = "published_at desc"
-categoryPage = "article/category"
-postPage = "article/article"
-
-[calendar]
-default = 1
-limit = "null"
-language = "en"
+[Cleanse\News\Components\Index cleanseNewsIndex]
 ==
-<header id="pvpaissa-header">
-    <section id="masthead">
-        {% component 'newsPvPaissaCarousel' %}
-    </section>
-</header>
-
-<section class="container pt-3">
-    <div class="cleanse-news mb-3">
-        <div class="cleanse-news-title mb-3">
-            <h3 class="d-md-inline">Latest News</h3>
-            <a class="d-sm-none d-md-inline" href="/news">View More</a>
-        </div>
-        <div class="cleanse-news-posts">
-            {% component 'newsFrontOneSummary' %}
-        </div>
-        <a class="d-xs-block d-md-none" href="/news">View More</a>
-    </div>
-</section>
+{% component 'cleanseNewsIndex' %}

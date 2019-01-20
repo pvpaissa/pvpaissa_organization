@@ -2,51 +2,11 @@
 @import '../../resources/css/fontawesome/fontawesome';
 
 body {
-  background: rgba(33, 33, 33, 1);
+  background: linear-gradient(315deg, #393F4D 0%, #000000 100%);
 }
 
-.btn-outline-pvpaissa {
-  color: #FFDD5F;
-  background-color: transparent;
-  background-image: none;
-  border-color: #FFDD5F;
-}
-.btn-outline-pvpaissa:hover {
-  color: #fff;
-  background-color: #FFDD5F;
-  border-color: #FFDD5F;
-}
-
-#pvpaissaSearch {
-  display: flex !important;
-  background: rgba(0, 0, 0, .3);
-
-  .form-control {
-    background: transparent;
-    border: 1px solid transparent;
-  }
-
-  .btn-search {
-    color: #FFF;
-    background-color: transparent;
-    background-image: none;
-    border-color: transparent;
-  }
-  .btn-search:hover {
-    color: #FFDD5F;
-    background-color: transparent;
-    background-image: none;
-    border-color: transparent;
-  }
-}
-
-.bg-darkNavbar {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-/* Fix in SCSS var file */
-.card {
-  border: 1px solid #FFDD5F;
+.mt-zero {
+  margin-top: 0!important;
 }
 
 #pvpaissaNavigation {
@@ -59,7 +19,40 @@ body {
   }
 
   .navbar {
+    background: rgba(57, 63, 77, .3);
     padding: 5px 1rem;
+  }
+
+  #pvpaissaSearch {
+    display: flex !important;
+    background: rgba(216, 216, 216, .3);
+
+    .form-control {
+      background: transparent;
+      border: 1px solid transparent;
+      color: rgba(255, 255, 255, .8);
+    }
+
+    .btn-search {
+      color: #FFF;
+      background-color: transparent;
+      background-image: none;
+      border-color: transparent;
+    }
+    .btn-search:hover {
+      color: #FFDD5F;
+      background-color: transparent;
+      background-image: none;
+      border-color: transparent;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: rgba(233, 233, 233, .5);
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
 
   .navbar-brand {
@@ -80,7 +73,7 @@ body {
   }
 
   .dropdown-menu {
-    background: rgba(0, 0, 0, 0.69);
+    background: rgba(57, 63, 77, 0.3);
   }
 
   .dropdown-item {
@@ -95,14 +88,6 @@ body {
   }
 }
 
-.navbar-toggler {
-  border-color: rgba(233, 233, 233, .5);
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
 .carousel-item img,
 #eventsHeader img {
   width: 100%;
@@ -113,7 +98,31 @@ body {
 }
 
 .carousel-caption {
-  bottom: 10px;
+  right: 15%;
+  bottom: 15%;
+  left: 5%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: left;
+
+  h4 {
+    background: rgba(57, 63, 77, .3);
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  .btn-outline-primary {
+    border-width: 2px;
+    background: rgba(57, 63, 77, .3);
+    text-transform: uppercase;
+  }
+  .btn-outline-primary:hover,
+  .btn-outline-primary:focus {
+    background: $primary;
+    color: rgba(57, 63, 77, .8);
+  }
 }
 
 .carousel-credit {
@@ -128,9 +137,16 @@ body {
 
 #recent-updates {
   padding: 2rem 0 1rem;
+  background: url("../images/latest-news-bg.png") no-repeat center center,
+              linear-gradient(315deg, #393F4D 0%, #000000 100%);
 
-  h2 {
-    color: #FFDD5F;
+  h4 {
+    color: #D4D4DC;
+  }
+  .sub-box {
+    height: 1px;
+    width: 65px;
+    background-color: $primary;
   }
 }
 
@@ -171,15 +187,25 @@ body {
 #footer {
   padding: 1rem 0;
   font-size: 1rem;
-  background: linear-gradient(to left, rgba(0, 0, 0, .33), rgba(0, 0, 0, .1));
+  background: #131313;
 
   #footer-logo {
     margin-bottom: 1rem;
-    color: rgba(255, 255, 255, .1);
+    color: #D4D4DC;
   }
 
   .copyright-text {
-    color: #fff;
+    color: #D4D4DC;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #pvpaissaSearch {
+    width: 350px;
+
+    .form-control {
+      width: 305px;
+    }
   }
 }
 
@@ -188,8 +214,12 @@ body {
     background: rgba(0, 0, 0, 0.33);
   }
 
+  .bg-md-dark {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
   .carousel-caption {
-    top: 55%;
+    top: 33%;
     right: 0;
     left: 0;
     min-height: 210px;

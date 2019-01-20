@@ -3,10 +3,16 @@ $(window).scroll(function() {
 
     //>=, not <=
     if (scroll >= 350) {
-        $("#pvpaissa-navigation .navbar").addClass("navbar-pvpaissa-bg");
+        $("#pvpaissaNavigation > .navbar").addClass("mt-zero");
     }
 
     if (scroll < 350) {
-        $("#pvpaissa-navigation .navbar").removeClass("navbar-pvpaissa-bg");
+        $("#pvpaissaNavigation > .navbar").removeClass("mt-zero");
     }
+});
+
+/* ??? Needed ??? */
+$(".navbar-toggler").on("click", function(){
+    $("#pvpaissaSearch").toggleClass("d-block");
+    $("#pvpaissaAccount").toggleClass("d-block");
 });
