@@ -267,14 +267,14 @@ body {
   margin-bottom: 3rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
-  background: #D4D4DC;
-  color: #131313;
+  background: #131313;
+  color: #D4D4DC;
 
   article {
     padding: 2rem 2rem 3rem;
 
     a {
-      color: #131313;
+      color: $primary;
       text-decoration: underline;
     }
 
@@ -289,6 +289,15 @@ body {
       color: #D4D4DC;
       font-size: 1.25rem;
       border-left: .25rem solid $primary;
+    }
+
+    p:first-child:first-letter {
+      color: $primary;
+      float: left;
+      font-size: 5rem;
+      line-height: 60px;
+      padding-top: 4px;
+      padding-right: 8px;
     }
   }
 
@@ -343,5 +352,6 @@ body {
   #article-content {
     position: relative;
     margin-top: -3rem;
+    border: 1px solid #393F4D;
   }
 }
