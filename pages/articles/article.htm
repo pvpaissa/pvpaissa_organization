@@ -1,0 +1,28 @@
+title = "Article Post"
+url = "/article/:slug"
+layout = "basic"
+description = "Viewing a single article post."
+is_hidden = 0
+
+[cleanseNewsArticle]
+slug = "{{ :slug }}"
+categoryPage = "article/category"
+
+[cleanseForumEmbedTopic]
+embedCode = "{{ :slug }}"
+channelSlug = "article-comments"
+memberPage = "forum/member"
+postsPerPage = 20
+==
+<?php
+function onEnd()
+{
+    $this->page->title              = $this['article']->title ? $this['article']->title : '';
+    $this->page->description        = $this['article']->excerpt ? $this['article']->excerpt : '';
+    $this->page->url                = $this->currentPageUrl() ? $this->currentPageUrl() : '';
+    $this->meta_title               = $this['article']->title ? $this['article']->title : '';
+    $this->page->meta_description   = $this['article']->title ? $this['article']->title : '';
+}
+?>
+==
+{% component 'cleanseNewsArticle' %}

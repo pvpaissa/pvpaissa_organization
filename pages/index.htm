@@ -8,93 +8,11 @@ is_hidden = 0
 
 [Cleanse\News\Components\Index cleanseNewsIndex]
 ==
-<section id="masthead">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <!-- Needs loop -->
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            <!-- Needs loop end -->
-        </ol>
-        <div class="carousel-inner">
-            {% set firstItem = posts|first %}
-            {% for post in posts %}
-            <div class="carousel-item{% if firstItem == post %} active{% endif %}">
-                {% if post.featured_images.count %}
-                {% for image in post.featured_images %}
-                <img
-                        class="d-block"
-                        data-src="{{ image.filename }}"
-                        src="{{ image.path }}"
-                        alt="{{ post.title }}" />
-                {% endfor %}
-                {% else %}
-                <img
-                        class="d-block"
-                        data-src="{{ 'assets/images/marshal-mami.jpg'|theme }}"
-                        src="{{ 'assets/images/marshal-mami.jpg'|theme }}"
-                        alt="{{ post.title }}" />
-                {% endif %}
-                <div class="carousel-caption">
-                    <div class="container">
-                        <div class="col-lg-6">
-                            <h4 class="d-inline-block px-2 py-3 mb-3">{{ post.title }}</h4>
-                            <a href="/article/{{ post.slug }}" class="btn btn-outline-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-<section id="recent-updates">
-    <div class="container">
-        <a class="d-inline-block mb-4" href="/articles/category/news">
-            <h4>Latest News</h4>
-            <div class="sub-box"></div>
-        </a>
-        {% set cols = 2 %}
-        {% for post in posts %}
-        {% if loop.index0 % cols == 0 %}
-        <div class="recent-articles mb-3">
-            {% endif %}
-            <div class="article">
-                {% if post.featured_images.count %}
-                {% for image in post.featured_images %}
-                <img
-                        class="article-img-top"
-                        data-src="{{ image.filename }}"
-                        src="{{ image.path }}"
-                        alt="{{ post.title }}" />
-                {% endfor %}
-                {% else %}
-                <img
-                        class="article-img-top"
-                        data-src="/themes/pvpaissa-organization/assets/images/default.png"
-                        src="/themes/pvpaissa-organization/assets/images/default.png"
-                        alt="{{ post.title }}" />
-                {% endif %}
-                <div class="article-tag-date">
-                    <p class="article-tag">
-                        {% for category in post.categories %}
-                        {{ category.name }}{% if not loop.last %} {% endif %}
-                        {% endfor %}
-                    </p><!-- Needs dynamic -->
-                    <p class="article-date">3d ago</p>
-                </div>
-
-                <div class="article-body">
-                    <h5 class="article-title"><a href="/article/{{ post.slug }}">{{ post.title }}</a></h5>
-                    <p class="article-text">{{ post.excerpt|raw }}</p>
-                </div>
-            </div>
-            {% if (loop.index0 % cols == cols - 1 or loop.last) %}
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-</section>
+<?php
+function onEnd()
+{
+    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
+}
+?>
+==
+{% component 'cleanseNewsIndex' %}

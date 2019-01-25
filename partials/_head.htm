@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta property="og:site_name" content="{{ this.page.meta_title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ this.page.url }}">
     <meta property="og:title" content="{{ this.page.meta_title }}">
+    <meta property="og:site_name" content="{{ this.page.meta_title }}">
+    <meta property="og:description" content="{{ this.page.meta_description }}">
     {% if this.page.open_graph_img %}
     <meta property="og:image" content="{{ this.page.open_graph_img }}">
     {% else %}
     <meta property="og:image" content="{{ 'assets/images/pvpaissa_og.jpeg'|theme }}">
     {% endif %}
-    <meta property="og:description" content="{{ this.page.meta_description }}">
-    <meta property="og:url" content="{{ ''| page(false) }}">
+    <meta name="theme-color" content="#FFDD5F">
 
     <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.png'|theme }}"/>
 

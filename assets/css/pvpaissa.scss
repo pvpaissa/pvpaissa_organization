@@ -90,7 +90,9 @@ body {
 
 /* Carousel */
 .carousel-item img,
-#eventsHeader img {
+.article-image img,
+.page-image img,
+#eventsHeader img { //?? Remove eventsHeader
   width: 100%;
   height: 100vh;
   object-fit: cover;
@@ -163,6 +165,7 @@ body {
 
     .article-img-top {
       width: 100%;
+      height: 250px;
       object-fit: cover;
       object-position: 50% 50%;
     }
@@ -254,6 +257,40 @@ body {
   }
 }
 
+#article-content {
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  background: #D4D4DC;
+  color: #131313;
+
+  article {
+    padding: 2rem 2rem 3rem;
+
+    a {
+      color: #131313;
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    blockquote {
+      padding: .5rem 1rem;
+      margin-bottom: 1rem;
+      background: $secondary;
+      color: #D4D4DC;
+      font-size: 1.25rem;
+      border-left: .25rem solid $primary;
+    }
+  }
+
+  #related-articles {
+    padding-top: 2rem;
+  }
+}
+
 @media screen and (max-width: 991px) {
   #pvpaissaSearch {
     width: 350px;
@@ -281,7 +318,7 @@ body {
   }
 }
 
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
   .recent-articles {
     flex-flow: row wrap;
     margin-right: -15px;
@@ -296,4 +333,12 @@ body {
       margin-left: 15px;
     }
   }
+
+  #article-content {
+    position: relative;
+    margin-top: -3rem;
+  }
 }
+
+.lol{}
+
