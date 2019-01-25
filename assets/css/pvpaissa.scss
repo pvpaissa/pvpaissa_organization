@@ -3,6 +3,7 @@
 
 body {
   background: linear-gradient(315deg, #393F4D 0%, #000000 100%);
+  font-weight: 300;
 }
 
 .mt-zero {
@@ -180,6 +181,7 @@ body {
       background: $primary;
       color: $secondary;
       font-size: .8rem;
+      font-weight: 400;
       text-transform: uppercase;
     }
 
@@ -215,6 +217,10 @@ body {
   font-size: 1rem;
   background: linear-gradient(355deg, rgba(19, 19, 19, 0.9) 0%, #131313 100%);
   border-bottom: 1px solid $secondary;
+
+  a {
+    font-weight: 300;
+  }
 }
 
 #footer {
