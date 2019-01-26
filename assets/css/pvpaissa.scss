@@ -147,7 +147,10 @@ body {
     color: #D4D4DC;
     text-transform: uppercase;
   }
-  h4 a:hover {
+  h4:hover {
+    color: $primary;
+  }
+  a:hover {
     text-decoration: none;
   }
 }
