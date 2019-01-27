@@ -10,9 +10,3 @@ $(window).scroll(function() {
         $("#pvpaissaNavigation > .navbar").removeClass("mt-zero");
     }
 });
-
-/* ??? Needed ??? */
-$(".navbar-toggler").on("click", function(){
-    $("#pvpaissaSearch").toggleClass("d-block");
-    $("#pvpaissaAccount").toggleClass("d-block");
-});
