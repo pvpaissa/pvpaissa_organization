@@ -1,0 +1,105 @@
+#pvpaissaNavigation {
+  a {
+    color: rgba($white, 0.9);
+  }
+  a:hover,
+  a.active > .fa-user {
+    color: $primary;
+  }
+
+  .navbar {
+    background: rgba($black, .6);
+    padding: 5px 1rem;
+  }
+
+  #pvpaissaSearch {
+    display: flex !important;
+    background: rgba(216, 216, 216, .33);
+
+    .form-control {
+      background: transparent;
+      border: 1px solid transparent;
+      color: rgba($white, .9);
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+
+    .btn-search {
+      color: $white;
+      background-color: transparent;
+      background-image: none;
+      border-color: transparent;
+    }
+    .btn-search:hover {
+      color: $primary;
+      background-color: transparent;
+      background-image: none;
+      border-color: transparent;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: rgba($black, .33);
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-brand svg {
+    padding-top: 0.3125rem;
+    fill: $white;
+  }
+  .navbar-brand:hover svg {
+    fill: $primary;
+  }
+
+  .fa, .fas, .far, .fal, .fab {
+    line-height: 1.5 !important;
+  }
+
+  .dropdown-menu {
+    background: $black;
+  }
+
+  .dropdown-item {
+    border-left: 1px solid rgba($white, 0);
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    text-decoration: none;
+    background: rgba($black, 0);
+    border-left: 1px solid $primary;
+  }
+}
+
+.mt-zero {
+  margin-top: 0!important;
+}
+
+@media screen and (max-width: 991px) {
+  #pvpaissaNavigation .navbar {
+    background: rgba($black, 0.9);
+  }
+
+  #navbarLeague {
+    margin-top: 1rem;
+  }
+
+  #pvpaissaSearch {
+    width: 350px;
+
+    .form-control {
+      width: 305px;
+    }
+  }
+}
+

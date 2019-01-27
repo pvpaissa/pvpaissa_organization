@@ -1,0 +1,95 @@
+#recent-updates {
+  padding: 2rem 0 1rem;
+  background: url("../images/jobs-bg.png") no-repeat fixed center center,
+  linear-gradient(315deg, #393F4D 0%, #000000 100%);
+
+  h4 {
+    color: $white;
+    text-transform: uppercase;
+  }
+  h4:hover {
+    color: $primary;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.recent-articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between !important;
+
+  .article {
+    position: relative;
+    max-width: 500px;
+    margin-bottom: 15px;
+    min-width: 0;
+    word-wrap: break-word;
+    border-radius: 0;
+
+    .article-img-top {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    .article-tag-date {
+      display: flex;
+      margin: 1rem 0 .5rem;
+    }
+
+    .article-tag {
+      padding: 2px 14px;
+      background: $primary;
+      color: $secondary;
+      font-size: .8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .article-date {
+      padding: 2px 14px;
+      color: $primary;
+      font-size: .8rem;
+    }
+
+    .article-body {
+      flex: 1 1 auto;
+      padding: 0 0 1.25rem;
+    }
+
+    .article-title {
+      margin-bottom: 1rem;
+    }
+    .article-title a {
+      color: $white;
+    }
+
+    .article-text {
+      color: $white;
+    }
+    .article-text:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .recent-articles {
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    .article {
+      display: flex;
+      flex: 1 0 0;
+      flex-direction: column;
+      margin-right: 15px;
+      margin-bottom: 0;
+      margin-left: 15px;
+    }
+  }
+}

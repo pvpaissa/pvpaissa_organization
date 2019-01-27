@@ -1,75 +1,143 @@
-.articleHeader {
-  position: absolute;
-  right: 15%;
-  bottom: 40px;
-  left: 15%;
-  z-index: 10;
-
-  h1 {
-    color: #fff;
-    text-align: center;
-  }
-
-  p {
-    color: #fff;
-    text-align: center;
+#article-wrapper {
+  .lead,
+  .tags {
+    margin-bottom: 0;
   }
 }
 
-.articleWrapper {
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 0 15px 15px;
-  background: #fff;
+#article-content {
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  background: $black;
+  color: $white;
+
+  article {
+    &:after {
+      content: '...';
+      display: block;
+      margin: 0 auto;
+      color: $secondary;
+      position: relative;
+      font-size: 30px;
+      letter-spacing: .75em;
+      text-align: center;
+    }
+
+    a {
+      color: $primary;
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .table {
+      background-color: rgba(color-yiq($black), .3);
+    }
+
+    blockquote {
+      padding: .5rem 1rem;
+      margin-bottom: 1rem;
+      background-color: rgba($black, .3);
+      color: $white;
+      font-size: 1.25rem;
+      border-left: .25rem solid $primary;
+    }
+
+    & > p:first-child:first-letter {
+      color: $primary;
+      float: left;
+      font-size: 3rem;
+      line-height: 2.5rem;
+      padding-top: .25rem;
+      padding-right: .5rem;
+    }
+  }
 }
 
-.articleContent {
+#related-articles .related {
+  flex-flow: row wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 
-  &:after {
-    content: '...';
-    display: block;
-    margin: 0 auto;
-    color: rgba(0,0,0,.68);
+  .article {
     position: relative;
-    font-size: 30px;
-    letter-spacing: .75em;
-    text-align: center;
-  }
+    margin-bottom: 15px;
+    min-width: 0;
+    word-wrap: break-word;
+    border-radius: 0;
 
-  img {
-    display: block;
-    margin-bottom: .25rem;
-  }
-  
-  .featured-image img {
-    max-width: 100%;
-    max-width: calc(100% + 30px);
-    margin-left: -15px;
-    margin-right: -15px;
+    .article-img-top {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    .article-tag-date {
+      display: flex;
+      margin: 1rem 0 .5rem;
+    }
+
+    .article-tag {
+      padding: 2px 14px;
+      background: $primary;
+      color: $secondary;
+      font-size: .8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .article-date {
+      padding: 2px 14px;
+      color: $primary;
+      font-size: .8rem;
+    }
+
+    .article-body {
+      flex: 1 1 auto;
+      padding: 0 0 1.25rem;
+    }
+
+    .article-title {
+      margin-bottom: 1rem;
+    }
+    .article-title a {
+      color: $white;
+    }
+
+    .article-text {
+      color: $white;
+    }
+    .article-text:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
-.articleComments {
-  .reply-footer {
-    padding: 0.25rem 1.25rem;
-    background-color: rgba(0, 0, 0, 0.03);
-    border-top: 1px solid rgba(0, 0, 0, 0.125);
+@media screen and (max-width: 991px) {
+  #related-articles {
+    background: linear-gradient(to bottom, rgba($white, .05), rgba($white, 0));
   }
 }
 
-.articleReplyForm {
-  img {
-    max-width: 100%;
+@media screen and (max-width: 768px) {
+  #article-content {
+    article > p:first-child:first-letter {
+      font-size: 5rem;
+      line-height: 4rem;
+      padding-top: .25rem;
+      padding-right: .5rem;
+    }
   }
 }
 
-#articleReply {
-  border: 1px solid #c7b198;
-}
-
-@media (min-width: 1024px) {
-  .articleHeader h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
+@media screen and (min-width: 576px) {
+  #article-content {
+    position: relative;
+    margin-top: -3rem;
+    border: 1px solid #393F4D;
   }
 }

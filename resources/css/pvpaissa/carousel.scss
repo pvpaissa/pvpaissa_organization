@@ -1,0 +1,35 @@
+.carousel-caption {
+  right: 15%;
+  bottom: 15%;
+  left: 15%;
+  color: $white;
+  text-align: left;
+
+  h1, h4 {
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  .btn-outline-primary {
+    border-width: 2px;
+    background: rgba($black, .8);
+    text-transform: uppercase;
+  }
+  .btn-outline-primary:hover,
+  .btn-outline-primary:focus {
+    background: $primary;
+    color: rgba($black, .8);
+  }
+}
+
+.carousel-indicators .active {
+  background-color: $primary;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-caption {
+    right: 0;
+    left: 0;
+    min-height: 210px;
+  }
+}
