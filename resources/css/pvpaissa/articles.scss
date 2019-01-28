@@ -34,16 +34,47 @@
     }
 
     .table {
-      background-color: rgba(color-yiq($black), .3);
+      background-color: rgba(57, 63, 77, 0.3);
+      color: $white;
+    }
+    .table th,
+    .table td {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: 1px solid $secondary;
     }
 
     blockquote {
-      padding: .5rem 1rem;
-      margin-bottom: 1rem;
-      background-color: rgba($black, .3);
+      background-color: rgba(57, 63, 77, 0.3);
+      border-left: 10px solid $primary;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+
+      &:before {
+        color: $primary;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+      }
+
+      p {
+        display: inline;
+      }
+    }
+
+    pre {
+      background-color: rgba(57, 63, 77, 0.3);
+      border-left: 10px solid $primary;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
       color: $white;
-      font-size: 1.25rem;
-      border-left: .25rem solid $primary;
+
+      code {
+        display: inline;
+      }
     }
 
     & > p:first-child:first-letter {
@@ -59,8 +90,6 @@
 
 #related-articles .related {
   flex-flow: row wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 
   .article {
     position: relative;
@@ -78,7 +107,7 @@
 
     .article-tag-date {
       display: flex;
-      margin: 1rem 0 .5rem;
+      margin: .5rem 0 0;
     }
 
     .article-tag {
@@ -88,6 +117,10 @@
       font-size: .8rem;
       font-weight: 400;
       text-transform: uppercase;
+
+      a {
+        color: $secondary;
+      }
     }
 
     .article-date {
@@ -96,13 +129,18 @@
       font-size: .8rem;
     }
 
+    .article-tag,
+    .article-date {
+      margin-bottom: .5rem;
+    }
+
     .article-body {
       flex: 1 1 auto;
       padding: 0 0 1.25rem;
     }
 
     .article-title {
-      margin-bottom: 1rem;
+      margin-bottom: .1rem;
     }
     .article-title a {
       color: $white;
@@ -131,6 +169,12 @@
       padding-top: .25rem;
       padding-right: .5rem;
     }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #related-articles .related .article .article-img-top {
+    height: 190px;
   }
 }
 
