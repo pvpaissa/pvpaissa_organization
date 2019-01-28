@@ -84,6 +84,20 @@ button:focus {
   }
 }
 
+.basic-page {
+  margin-top: 90px;
+  margin-bottom: 5rem;
+}
+
+.page-title {
+  margin-bottom: 1.5rem;
+
+  h1 {
+    color: $white;
+    text-transform: uppercase;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .bg-darkNavbar {
     background: rgba($black, 0.33);

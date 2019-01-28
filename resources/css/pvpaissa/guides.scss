@@ -1,0 +1,260 @@
+.guides-block {
+  padding: .5rem;
+
+  .guides-job {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    .guides-job-abbr {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 900;
+    }
+  }
+
+  /* Tank */
+  .guides-paladin {
+    background: url("../images/job-guides/pld.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+                      rgba(52, 89, 149, 0.3),
+                      rgba(52, 89, 149, 0.9)
+      ), url("../images/job-guides/pld.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-dark-knight {
+    background: url("../images/job-guides/drk.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(52, 89, 149, 0.3),
+              rgba(52, 89, 149, 0.9)
+      ), url("../images/job-guides/drk.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-warrior {
+    background: url("../images/job-guides/war.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(52, 89, 149, 0.3),
+              rgba(52, 89, 149, 0.9)
+      ), url("../images/job-guides/war.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-paladin .guides-job-abbr,
+  .guides-dark-knight .guides-job-abbr,
+  .guides-warrior .guides-job-abbr {
+    text-shadow: #2196F3 1px 0 10px;
+  }
+
+  /* DPS */
+  .guides-monk {
+    background: url("../images/job-guides/mnk.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(90, 0, 2, 0.3),
+              rgba(90, 0, 2, 0.9)
+      ), url("../images/job-guides/mnk.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-ninja {
+    background: url("../images/job-guides/nin.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(90, 0, 2, 0.3),
+              rgba(90, 0, 2, 0.9)
+      ), url("../images/job-guides/nin.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-dragoon {
+    background: url("../images/job-guides/drg.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(90, 0, 2, 0.3),
+              rgba(90, 0, 2, 0.9)
+      ), url("../images/job-guides/drg.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-samurai {
+    background: url("../images/job-guides/sam.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(90, 0, 2, 0.3),
+              rgba(90, 0, 2, 0.9)
+      ), url("../images/job-guides/sam.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-bard {
+    background: url("../images/job-guides/brd.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(90, 0, 2, 0.3),
+              rgba(90, 0, 2, 0.9)
+      ), url("../images/job-guides/brd.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-machinist {
+    background: url("../images/job-guides/mch.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(90, 0, 2, 0.3),
+              rgba(90, 0, 2, 0.9)
+      ), url("../images/job-guides/mch.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-black-mage {
+    background: url("../images/job-guides/blm.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(90, 0, 2, 0.3),
+              rgba(90, 0, 2, 0.9)
+      ), url("../images/job-guides/blm.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-summoner {
+    background: url("../images/job-guides/smn.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(90, 0, 2, 0.3),
+              rgba(90, 0, 2, 0.9)
+      ), url("../images/job-guides/smn.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-red-mage {
+    background: url("../images/job-guides/rdm.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(90, 0, 2, 0.3),
+              rgba(90, 0, 2, 0.9)
+      ), url("../images/job-guides/rdm.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-monk .guides-job-abbr,
+  .guides-ninja .guides-job-abbr,
+  .guides-dragoon .guides-job-abbr,
+  .guides-samurai .guides-job-abbr,
+  .guides-bard .guides-job-abbr,
+  .guides-machinist .guides-job-abbr,
+  .guides-black-mage .guides-job-abbr,
+  .guides-summoner .guides-job-abbr,
+  .guides-red-mage .guides-job-abbr {
+    text-shadow: #f44336 1px 0 10px;
+  }
+
+  /* Healers */
+  .guides-white-mage {
+    background: url("../images/job-guides/whm.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(62, 86, 65, 0.3),
+              rgba(62, 86, 65, 0.9)
+      ), url("../images/job-guides/whm.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-scholar {
+    background: url("../images/job-guides/sch.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(62, 86, 65, 0.3),
+              rgba(62, 86, 65, 0.9)
+      ), url("../images/job-guides/sch.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-astrologian {
+    background: url("../images/job-guides/ast.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(62, 86, 65, 0.3),
+              rgba(62, 86, 65, 0.9)
+      ), url("../images/job-guides/ast.jpg") center center no-repeat;
+    }
+  }
+
+  .guides-white-mage .guides-job-abbr,
+  .guides-scholar .guides-job-abbr,
+  .guides-astrologian .guides-job-abbr {
+    text-shadow: #4caf50 1px 0 10px;
+  }
+
+  /* Future */
+  .guides-blue-mage {
+    background: url("../images/job-guides/blu.jpg") center center no-repeat;
+
+    &:hover {
+      background: linear-gradient(to bottom,
+              rgba(90, 0, 2, 0.3),
+              rgba(90, 0, 2, 0.9)
+      ), url("../images/job-guides/blu.jpg") center center no-repeat;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .guides-job {
+    height: 175px;
+    width: 175px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .guides-job {
+    height: 254px;
+    width: 254px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .guides-job {
+    height: 164px;
+    width: 164px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .guides-job {
+    height: 224px;
+    width: 224px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .guides-job {
+    height: 269px;
+    width: 269px;
+  }
+}
