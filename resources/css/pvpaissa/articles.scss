@@ -92,65 +92,12 @@
   flex-flow: row wrap;
 
   .article {
-    position: relative;
-    margin-bottom: 15px;
-    min-width: 0;
-    word-wrap: break-word;
-    border-radius: 0;
-
     .article-img-top {
-      width: 100%;
       height: 250px;
-      object-fit: cover;
-      object-position: 50% 50%;
     }
 
     .article-tag-date {
-      display: flex;
       margin: .5rem 0 0;
-    }
-
-    .article-tag {
-      padding: 2px 14px;
-      background: $primary;
-      color: $secondary;
-      font-size: .8rem;
-      font-weight: 400;
-      text-transform: uppercase;
-
-      a {
-        color: $secondary;
-      }
-    }
-
-    .article-date {
-      padding: 2px 14px;
-      color: $primary;
-      font-size: .8rem;
-    }
-
-    .article-tag,
-    .article-date {
-      margin-bottom: .5rem;
-    }
-
-    .article-body {
-      flex: 1 1 auto;
-      padding: 0 0 1.25rem;
-    }
-
-    .article-title {
-      margin-bottom: .1rem;
-    }
-    .article-title a {
-      color: $white;
-    }
-
-    .article-text {
-      color: $white;
-    }
-    .article-text:last-child {
-      margin-bottom: 0;
     }
   }
 }
