@@ -1,3 +1,14 @@
+.guides-page {
+  a {
+    color: $white;
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
 .guides-block {
   padding: .5rem;
 
@@ -21,35 +32,35 @@
 
   /* Tank */
   .guides-paladin {
-    background: url("../images/job-guides/pld.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(52, 89, 149, 0.3),
+            rgba(52, 89, 149, 0.9)
+    ), url("../images/job-guides/pld.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-                      rgba(52, 89, 149, 0.3),
-                      rgba(52, 89, 149, 0.9)
-      ), url("../images/job-guides/pld.jpg") center center no-repeat;
+      background: url("../images/job-guides/pld.jpg") center center no-repeat;
     }
   }
 
   .guides-dark-knight {
-    background: url("../images/job-guides/drk.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(52, 89, 149, 0.3),
+            rgba(52, 89, 149, 0.9)
+    ), url("../images/job-guides/drk.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(52, 89, 149, 0.3),
-              rgba(52, 89, 149, 0.9)
-      ), url("../images/job-guides/drk.jpg") center center no-repeat;
+      background: url("../images/job-guides/drk.jpg") center center no-repeat;
     }
   }
 
   .guides-warrior {
-    background: url("../images/job-guides/war.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(52, 89, 149, 0.3),
+            rgba(52, 89, 149, 0.9)
+    ), url("../images/job-guides/war.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(52, 89, 149, 0.3),
-              rgba(52, 89, 149, 0.9)
-      ), url("../images/job-guides/war.jpg") center center no-repeat;
+      background: url("../images/job-guides/war.jpg") center center no-repeat;
     }
   }
 
@@ -68,101 +79,101 @@
 
   /* DPS */
   .guides-monk {
-    background: url("../images/job-guides/mnk.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(90, 0, 2, 0.3),
+            rgba(90, 0, 2, 0.9)
+    ), url("../images/job-guides/mnk.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(90, 0, 2, 0.3),
-              rgba(90, 0, 2, 0.9)
-      ), url("../images/job-guides/mnk.jpg") center center no-repeat;
+      background: url("../images/job-guides/mnk.jpg") center center no-repeat;
     }
   }
 
   .guides-ninja {
-    background: url("../images/job-guides/nin.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(90, 0, 2, 0.3),
+            rgba(90, 0, 2, 0.9)
+    ), url("../images/job-guides/nin.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(90, 0, 2, 0.3),
-              rgba(90, 0, 2, 0.9)
-      ), url("../images/job-guides/nin.jpg") center center no-repeat;
+      background: url("../images/job-guides/nin.jpg") center center no-repeat;
     }
   }
 
   .guides-dragoon {
-    background: url("../images/job-guides/drg.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(90, 0, 2, 0.3),
+            rgba(90, 0, 2, 0.9)
+    ), url("../images/job-guides/drg.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(90, 0, 2, 0.3),
-              rgba(90, 0, 2, 0.9)
-      ), url("../images/job-guides/drg.jpg") center center no-repeat;
+      background: url("../images/job-guides/drg.jpg") center center no-repeat;
     }
   }
 
   .guides-samurai {
-    background: url("../images/job-guides/sam.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(90, 0, 2, 0.3),
+            rgba(90, 0, 2, 0.9)
+    ), url("../images/job-guides/sam.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(90, 0, 2, 0.3),
-              rgba(90, 0, 2, 0.9)
-      ), url("../images/job-guides/sam.jpg") center center no-repeat;
+      background: url("../images/job-guides/sam.jpg") center center no-repeat;
     }
   }
 
   .guides-bard {
-    background: url("../images/job-guides/brd.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(90, 0, 2, 0.3),
+            rgba(90, 0, 2, 0.9)
+    ), url("../images/job-guides/brd.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(90, 0, 2, 0.3),
-              rgba(90, 0, 2, 0.9)
-      ), url("../images/job-guides/brd.jpg") center center no-repeat;
+      background: url("../images/job-guides/brd.jpg") center center no-repeat;
     }
   }
 
   .guides-machinist {
-    background: url("../images/job-guides/mch.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(90, 0, 2, 0.3),
+            rgba(90, 0, 2, 0.9)
+    ), url("../images/job-guides/mch.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(90, 0, 2, 0.3),
-              rgba(90, 0, 2, 0.9)
-      ), url("../images/job-guides/mch.jpg") center center no-repeat;
+      background: url("../images/job-guides/mch.jpg") center center no-repeat;
     }
   }
 
   .guides-black-mage {
-    background: url("../images/job-guides/blm.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(90, 0, 2, 0.3),
+            rgba(90, 0, 2, 0.9)
+    ), url("../images/job-guides/blm.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(90, 0, 2, 0.3),
-              rgba(90, 0, 2, 0.9)
-      ), url("../images/job-guides/blm.jpg") center center no-repeat;
+      background: url("../images/job-guides/blm.jpg") center center no-repeat;
     }
   }
 
   .guides-summoner {
-    background: url("../images/job-guides/smn.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(90, 0, 2, 0.3),
+            rgba(90, 0, 2, 0.9)
+    ), url("../images/job-guides/smn.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(90, 0, 2, 0.3),
-              rgba(90, 0, 2, 0.9)
-      ), url("../images/job-guides/smn.jpg") center center no-repeat;
+      background: url("../images/job-guides/smn.jpg") center center no-repeat;
     }
   }
 
   .guides-red-mage {
-    background: url("../images/job-guides/rdm.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(90, 0, 2, 0.3),
+            rgba(90, 0, 2, 0.9)
+    ), url("../images/job-guides/rdm.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(90, 0, 2, 0.3),
-              rgba(90, 0, 2, 0.9)
-      ), url("../images/job-guides/rdm.jpg") center center no-repeat;
+      background: url("../images/job-guides/rdm.jpg") center center no-repeat;
     }
   }
 
@@ -193,35 +204,35 @@
 
   /* Healers */
   .guides-white-mage {
-    background: url("../images/job-guides/whm.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(62, 86, 65, 0.3),
+            rgba(62, 86, 65, 0.9)
+    ), url("../images/job-guides/whm.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(62, 86, 65, 0.3),
-              rgba(62, 86, 65, 0.9)
-      ), url("../images/job-guides/whm.jpg") center center no-repeat;
+      background: url("../images/job-guides/whm.jpg") center center no-repeat;
     }
   }
 
   .guides-scholar {
-    background: url("../images/job-guides/sch.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(62, 86, 65, 0.3),
+            rgba(62, 86, 65, 0.9)
+    ), url("../images/job-guides/sch.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(62, 86, 65, 0.3),
-              rgba(62, 86, 65, 0.9)
-      ), url("../images/job-guides/sch.jpg") center center no-repeat;
+      background: url("../images/job-guides/sch.jpg") center center no-repeat;
     }
   }
 
   .guides-astrologian {
-    background: url("../images/job-guides/ast.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(62, 86, 65, 0.3),
+            rgba(62, 86, 65, 0.9)
+    ), url("../images/job-guides/ast.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(62, 86, 65, 0.3),
-              rgba(62, 86, 65, 0.9)
-      ), url("../images/job-guides/ast.jpg") center center no-repeat;
+      background: url("../images/job-guides/ast.jpg") center center no-repeat;
     }
   }
 
@@ -240,13 +251,13 @@
 
   /* Future */
   .guides-blue-mage {
-    background: url("../images/job-guides/blu.jpg") center center no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(90, 0, 2, 0.3),
+            rgba(90, 0, 2, 0.9)
+    ), url("../images/job-guides/blu.jpg") center center no-repeat;
 
     &:hover {
-      background: linear-gradient(to bottom,
-              rgba(90, 0, 2, 0.3),
-              rgba(90, 0, 2, 0.9)
-      ), url("../images/job-guides/blu.jpg") center center no-repeat;
+      background: url("../images/job-guides/blu.jpg") center center no-repeat;
     }
   }
 }
