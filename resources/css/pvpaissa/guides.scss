@@ -17,10 +17,6 @@
       font-size: 2rem;
       font-weight: 900;
     }
-
-    img {
-      color: rgba(52, 89, 149, 0.9);
-    }
   }
 
   /* Tank */
@@ -61,6 +57,13 @@
   .guides-dark-knight .guides-job-abbr,
   .guides-warrior .guides-job-abbr {
     text-shadow: #2196F3 1px 0 10px;
+  }
+
+  .guides-paladin svg,
+  .guides-dark-knight svg,
+  .guides-warrior svg {
+    fill: #4A90E2;
+    filter: url(#tankShadow);
   }
 
   /* DPS */
@@ -175,6 +178,19 @@
     text-shadow: #f44336 1px 0 10px;
   }
 
+  .guides-monk svg,
+  .guides-ninja svg,
+  .guides-dragoon svg,
+  .guides-samurai svg,
+  .guides-bard svg,
+  .guides-machinist svg,
+  .guides-black-mage svg,
+  .guides-summoner svg,
+  .guides-red-mage svg {
+    fill: #E24A72;
+    filter: url(#damageShadow);
+  }
+
   /* Healers */
   .guides-white-mage {
     background: url("../images/job-guides/whm.jpg") center center no-repeat;
@@ -213,6 +229,13 @@
   .guides-scholar .guides-job-abbr,
   .guides-astrologian .guides-job-abbr {
     text-shadow: #4caf50 1px 0 10px;
+  }
+
+  .guides-white-mage svg,
+  .guides-scholar svg,
+  .guides-astrologian svg {
+    fill: #4AE272;
+    filter: url(#healerShadow);
   }
 
   /* Future */

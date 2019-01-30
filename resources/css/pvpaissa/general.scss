@@ -166,6 +166,13 @@ button:focus {
   }
 }
 
+/* Job Icons */
+.job-icon svg {
+  height: auto;
+  width: 48px;
+  fill: $white;
+}
+
 @media screen and (max-width: 991px) {
   .side-bar {
     padding-top: 1.5rem;
