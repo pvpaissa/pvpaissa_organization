@@ -262,10 +262,10 @@ $font-size-lg:                ($font-size-base * 1.25) !default;
 $font-size-sm:                ($font-size-base * .875) !default;
 
 $font-weight-light:           300 !default;
-$font-weight-normal:          300 !default;
+$font-weight-normal:          400 !default;
 $font-weight-bold:            900 !default;
 
-$font-weight-base:            $font-weight-normal !default;
+$font-weight-base:            $font-weight-light !default;
 $line-height-base:            1.5 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
@@ -277,7 +277,7 @@ $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      ($spacer / 2) !default;
 $headings-font-family:        inherit !default;
-$headings-font-weight:        400 !default;
+$headings-font-weight:        $font-weight-normal !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 
@@ -286,14 +286,14 @@ $display2-size:               5.5rem !default;
 $display3-size:               4.5rem !default;
 $display4-size:               3.5rem !default;
 
-$display1-weight:             300 !default;
-$display2-weight:             300 !default;
-$display3-weight:             300 !default;
-$display4-weight:             300 !default;
+$display1-weight:             $font-weight-light !default;
+$display2-weight:             $font-weight-light !default;
+$display3-weight:             $font-weight-light !default;
+$display4-weight:             $font-weight-light !default;
 $display-line-height:         $headings-line-height !default;
 
 $lead-font-size:              ($font-size-base * 1.25) !default;
-$lead-font-weight:            300 !default;
+$lead-font-weight:            $font-weight-light !default;
 
 $small-font-size:             80% !default;
 
@@ -852,26 +852,26 @@ $progress-bar-transition:           width .6s ease !default;
 
 // List group
 
-$list-group-bg:                     $white !default;
-$list-group-border-color:           rgba($black, .125) !default;
+$list-group-bg:                     transparent !default;
+$list-group-border-color:           $secondary !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
 $list-group-item-padding-y:         .75rem !default;
 $list-group-item-padding-x:         1.25rem !default;
 
-$list-group-hover-bg:               $gray-100 !default;
-$list-group-active-color:           $component-active-color !default;
-$list-group-active-bg:              $component-active-bg !default;
-$list-group-active-border-color:    $list-group-active-bg !default;
+$list-group-hover-bg:               $primary !default;
+$list-group-active-color:           $black !default;
+$list-group-active-bg:              $primary !default;
+$list-group-active-border-color:    $primary !default;
 
 $list-group-disabled-color:         $gray-600 !default;
 $list-group-disabled-bg:            $list-group-bg !default;
 
-$list-group-action-color:           $gray-700 !default;
-$list-group-action-hover-color:     $list-group-action-color !default;
+$list-group-action-color:           $primary !default;
+$list-group-action-hover-color:     $black !default;
 
-$list-group-action-active-color:    $body-color !default;
+$list-group-action-active-color:    $black !default;
 $list-group-action-active-bg:       $gray-200 !default;
 
 
