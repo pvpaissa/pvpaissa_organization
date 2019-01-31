@@ -5,6 +5,7 @@
 .list-group {
   display: flex;
   flex-direction: column;
+  font-weight: $font-weight-normal;
 
   // No need to set list-style: none; since .list-group-item is block level
   padding-left: 0; // reset padding because ul and ol
@@ -25,7 +26,6 @@
   // Hover state
   @include hover-focus {
     color: $list-group-action-hover-color;
-    font-weight: 400;
     text-decoration: none;
     background-color: $list-group-hover-bg;
   }
