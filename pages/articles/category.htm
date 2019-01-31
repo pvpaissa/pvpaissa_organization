@@ -1,0 +1,42 @@
+title = "Articles Category"
+url = "/articles/category/:slug/:page?"
+layout = "basic"
+description = "Viewing articles in a specific category."
+meta_title = "Article Category"
+meta_description = "Viewing articles in a specific category."
+is_hidden = 0
+
+[cleanseNewsArticles]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "articles/category"
+postPage = "article/article"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "articles/category"
+==
+<?php
+function onEnd()
+{
+    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
+
+    if (isset($this['category']->name)) {
+        $this->page->title              = 'Category: ' . $this['category']->name . ' - PvPaissa';
+        $this->meta_title               = 'Category: ' . $this['category']->name . ' - PvPaissa';
+        $this->page->description        = 'A list of articles with the tag: ' . $this['category']->name;
+        $this->page->meta_description   = 'A list of articles with the tag: ' . $this['category']->name;
+    } else {
+        $this->page->title              = 'Oops! - PvPaissa';
+        $this->meta_title               = 'Oops! - PvPaissa';
+        $this->page->description        = 'No articles contain the tag: ' . $this->param('slug');
+        $this->page->meta_description   = 'No articles contain the tag: ' . $this->param('slug');
+    }
+}
+?>
+==
+{% component 'cleanseNewsArticles' %}
