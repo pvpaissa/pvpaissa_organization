@@ -23,6 +23,10 @@ function onEnd()
     $this->page->url                = $this->currentPageUrl() ? $this->currentPageUrl() : '';
     $this->meta_title               = $this['article']->title ? $this['article']->title : '';
     $this->page->meta_description   = $this['article']->title ? $this['article']->title : '';
+
+    if (count($this['article']->featured_images)) {
+        $this->page->open_graph_img = $this['article']->featured_images[0]['path'] ?: false;
+    }
 }
 ?>
 ==
