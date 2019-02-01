@@ -1,0 +1,18 @@
+title = "Request Sent - PvPaissa"
+url = "/stream/requested"
+layout = "basic"
+description = "Request sent. Your channel will start showing up soon."
+meta_title = "Request Sent - PvPaissa"
+meta_description = "Request sent. Your channel will start showing up soon."
+is_hidden = 0
+
+[cleanseTwitchRequested]
+==
+<?php
+function onEnd()
+{
+    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
+}
+?>
+==
+{% component 'cleanseTwitchRequested' %}
