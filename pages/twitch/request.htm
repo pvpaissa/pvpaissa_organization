@@ -1,0 +1,18 @@
+title = "Request Stream Form - PvPaissa"
+url = "/stream/request"
+layout = "basic"
+description = "Request to have your stream listed."
+meta_title = "Request Stream Form - PvPaissa"
+meta_description = "Request to have your stream listed."
+is_hidden = 0
+
+[cleanseTwitchRequest]
+==
+<?php
+function onEnd()
+{
+    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
+}
+?>
+==
+{% component 'cleanseTwitchRequest' %}
