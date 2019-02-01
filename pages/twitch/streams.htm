@@ -1,0 +1,18 @@
+title = "Streams - PvPaissa"
+url = "/streams"
+layout = "basic"
+description = "Final Fantasy XIV PvP streamers list."
+meta_title = "Streams - PvPaissa"
+meta_description = "Final Fantasy XIV PvP streamers list."
+is_hidden = 0
+
+[cleanseTwitchStreamers]
+==
+<?php
+function onEnd()
+{
+    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
+}
+?>
+==
+{% component 'cleanseTwitchStreamers' %}
