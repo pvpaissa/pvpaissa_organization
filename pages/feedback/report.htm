@@ -1,0 +1,19 @@
+title = "Report Content - PvPaissa"
+url = "/feedback/report/:slug?"
+layout = "basic"
+description = "Report content be updated on our site."
+meta_title = "Report Content - PvPaissa"
+meta_description = "Report content be updated on our site."
+is_hidden = 0
+
+[cleanseFeedbackReport]
+slug = "{{ :slug }}"
+==
+<?php
+function onEnd()
+{
+    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
+}
+?>
+==
+{% component 'cleanseFeedbackReport' %}

@@ -1,0 +1,19 @@
+title = "Content Submission - PvPaissa"
+url = "/feedback/request/:slug?"
+layout = "basic"
+description = "Request content be added to our site."
+meta_title = "Content Submission - PvPaissa"
+meta_description = "Request content be added to our site."
+is_hidden = 0
+
+[cleanseFeedbackRequest]
+slug = "{{ :slug }}"
+==
+<?php
+function onEnd()
+{
+    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
+}
+?>
+==
+{% component 'cleanseFeedbackRequest' %}
