@@ -1,0 +1,18 @@
+title = "Podcast List - PvPaissa"
+url = "/podcasts"
+layout = "basic"
+description = "A list of curated FFXIV PvP podcasts."
+meta_title = "Podcast List - PvPaissa"
+meta_description = "A list of curated FFXIV PvP podcasts."
+is_hidden = 0
+
+[cleansePodcastList]
+==
+<?php
+function onEnd()
+{
+    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
+}
+?>
+==
+{% component 'cleansePodcastList' %}
