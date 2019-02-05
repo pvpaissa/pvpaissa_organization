@@ -9,4 +9,11 @@ is_hidden = 0
 [cleanseNewsGuides]
 slug = "{{ :slug }}"
 ==
+<?php
+function onEnd()
+{
+    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
+}
+?>
+==
 {% component 'cleanseNewsGuides' %}
