@@ -1,11 +1,11 @@
 <section id="pvpaissaNavigation">
     <nav class="navbar navbar-expand-lg fixed-top mt-lg-3">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLeague"
-                    aria-controls="navbarLeague" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPrimary"
+                    aria-controls="navbarPrimary" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand{% if this.page.url == '/' %} active{% endif %}" href="/">
                 <svg class="d-inline-block" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 36 36" width="36"
                      height="36">
@@ -92,7 +92,7 @@
                 <a class="d-inline-block" href="/account">Login</a>
                 {% endif %}
             </div>
-            <div id="navbarLeague" class="collapse navbar-collapse">
+            <div id="navbarPrimary" class="collapse navbar-collapse">
                 <ul class="navbar-nav main-nav mr-auto">
                     <li class="nav-item{% if this.page.url == '/guides' %} active{% endif %}">
                         <a class="nav-link" href="/guides">Guides
@@ -116,12 +116,15 @@
                 </ul>
 
                 <div class="navbar-nav social-nav mt-2 mt-md-0">
-                    <form id="pvpaissaSearch" class="form-inline my-2 my-lg-0 d-none d-lg-block">
-                        <input class="form-control" type="search" placeholder="Search">
+                    {% if this.page.url != '/search' %}
+                    <form id="pvpaissaSearch" class="form-inline my-2 my-lg-0 d-none d-lg-block"
+                          action="{{ '/search'|app }}" method="get">
+                        <input class="form-control" name="q" type="search" placeholder="Article, Character, etc">
                         <button class="btn btn-search" type="submit">
                             <span class="fa fa-search"></span>
                         </button>
                     </form>
+                    {% endif %}
                     <a class="nav-item nav-link ml-lg-2" href="//twitter.com/pvpaissa">
                         <span class="fab fa-twitter"></span>
                         <span class="d-lg-none">PvPaissa Twitter</span>

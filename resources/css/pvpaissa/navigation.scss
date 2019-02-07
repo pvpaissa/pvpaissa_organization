@@ -12,6 +12,11 @@
     padding: 5px 1rem;
   }
 
+  .navbar-brand.active,
+  .nav-item.active > a {
+    color: $primary;
+  }
+
   #pvpaissaSearch {
     display: flex !important;
     background: rgba(216, 216, 216, .33);
