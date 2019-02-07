@@ -8,11 +8,4 @@ is_hidden = 0
 
 [cleanseNewsGuides]
 ==
-<?php
-function onEnd()
-{
-    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
-}
-?>
-==
 {% component 'cleanseNewsGuides' %}

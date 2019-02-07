@@ -14,7 +14,6 @@ function onEnd()
 {
     $this->page->title              = $this['article']->title ? $this['article']->title : '';
     $this->page->description        = $this['article']->excerpt ?: 'Viewing a single article post.';
-    $this->page->url                = $this->currentPageUrl() ? $this->currentPageUrl() : '';
     $this->meta_title               = $this['article']->title ? $this['article']->title : '';
     $this->page->meta_description   = $this['article']->excerpt ?: 'Viewing a single article post.';
 

@@ -1,18 +1,11 @@
 title = "PvPaissa - A FFXIV PvP Resource and Community"
 url = "/"
-layout = "index"
+layout = "basic"
 description = "A Final Fantasy XIV PvP resource and community."
 meta_title = "PvPaissa - A FFXIV PvP Resource and Community"
 meta_description = "A FFXIV PvP Resource and Community."
 is_hidden = 0
 
 [Cleanse\News\Components\Index cleanseNewsIndex]
-==
-<?php
-function onEnd()
-{
-    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
-}
-?>
 ==
 {% component 'cleanseNewsIndex' %}

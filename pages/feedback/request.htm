@@ -9,11 +9,4 @@ is_hidden = 0
 [cleanseFeedbackRequest]
 slug = "{{ :slug }}"
 ==
-<?php
-function onEnd()
-{
-    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
-}
-?>
-==
 {% component 'cleanseFeedbackRequest' %}

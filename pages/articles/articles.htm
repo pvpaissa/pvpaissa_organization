@@ -19,11 +19,4 @@ slug = "{{ :slug }}"
 displayEmpty = 0
 categoryPage = "articles/category"
 ==
-<?php
-function onEnd()
-{
-    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
-}
-?>
-==
 {% component 'cleanseNewsArticles' %}

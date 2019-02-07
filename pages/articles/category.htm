@@ -23,8 +23,6 @@ categoryPage = "articles/category"
 <?php
 function onEnd()
 {
-    $this->page->url = $this->currentPageUrl() ? $this->currentPageUrl() : '';
-
     if (isset($this['category']->name)) {
         $this->page->title              = 'Category: ' . $this['category']->name . ' - PvPaissa';
         $this->meta_title               = 'Category: ' . $this['category']->name . ' - PvPaissa';
