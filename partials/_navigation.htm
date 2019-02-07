@@ -147,7 +147,10 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarAccountMenuLink">
                             <a class="dropdown-item" href="/account">Settings</a>
-                            <a class="dropdown-item" href="/logout">Logout</a>
+                            <a class="dropdown-item" href="#"
+                               data-request="onLogout" title="Sign Out">
+                                Logout
+                            </a>
                         </div>
                     </div>
                     {% else %}
