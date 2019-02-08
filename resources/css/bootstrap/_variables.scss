@@ -314,7 +314,7 @@ $nested-kbd-font-weight:      $font-weight-bold !default;
 
 $list-inline-padding:         .5rem !default;
 
-$mark-bg:                     #fcf8e3 !default;
+$mark-bg:                     rgba($primary, .9) !default;
 
 $hr-margin-y:                 $spacer !default;
 
@@ -426,8 +426,8 @@ $input-line-height-lg:                  $input-btn-line-height-lg !default;
 $input-bg:                              rgba(0, 0, 0, .3) !default;
 $input-disabled-bg:                     $gray-200 !default;
 
-$input-color:                           $gray-700 !default;
-$input-border-color:                    rgba(0, 0, 0, .3) !default;
+$input-color:                           $white !default;
+$input-border-color:                    rgba($primary, .5) !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
 
