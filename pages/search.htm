@@ -31,8 +31,7 @@ function onEnd() {
         </div>
 
         <div class="feedback-page mb-3">
-            <form class="form-inline my-2 my-lg-0 d-none d-lg-block"
-                  action="{{ '/search'|app }}" method="get">
+            <form class="d-lg-block my-2 my-lg-0" action="{{ '/search'|app }}" method="get">
                 <div class="input-group">
                     <input type="search" class="form-control form-control-lg" name="q"
                            placeholder="Article, Character, etc" value="{{ searchResults.query }}">
