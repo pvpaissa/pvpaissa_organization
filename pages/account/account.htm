@@ -1,0 +1,13 @@
+title = "Account - PvPaissa"
+url = "/account/:code?"
+layout = "basic"
+description = "PvPaissa sign in, registration, and account management."
+meta_title = "Account - PvPaissa"
+meta_description = "PvPaissa sign in, registration, and account management."
+is_hidden = 0
+
+[cleanseAccount]
+paramCode = "code"
+redirect = "/account"
+==
+{% component 'cleanseAccount' %}
