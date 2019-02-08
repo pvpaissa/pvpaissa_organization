@@ -1,0 +1,12 @@
+title = "Reset Password"
+url = "/reset/:code?"
+layout = "basic"
+description = "Forgotten password form."
+meta_title = "Reset Password"
+meta_description = "Forgotten password form."
+is_hidden = 0
+
+[cleanseResetPassword]
+paramCode = "code"
+==
+{% component 'cleanseResetPassword' %}
