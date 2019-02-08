@@ -1,0 +1,52 @@
+title = "Search - PvPaissa"
+url = "/search"
+layout = "basic"
+description = "Search PvPaissa."
+meta_title = "Search - PvPaissa"
+meta_description = "Search PvPaissa."
+is_hidden = 0
+
+[searchResults]
+resultsPerPage = 10
+showProviderBadge = 1
+noResultsMessage = "Your search returned no results."
+visitPageMessage = "Visit page"
+==
+<?php
+function onEnd() {
+    if ($this['searchResults']->query) {
+        $this->page->title              = "'" . $this['searchResults']->query . "' Search - PvPaissa";
+        $this->page->meta_title         = "'" . $this['searchResults']->query . "' Search - PvPaissa";
+        $this->page->description        = 'Search results for: ' . $this['searchResults']->query;
+        $this->page->meta_description   = 'Search results for: ' . $this['searchResults']->query;
+    }
+}
+?>
+==
+<div class="basic-page">
+    <div class="container">
+        <div class="page-title">
+            <h1>Search</h1>
+            <div class="sub-box"></div>
+        </div>
+
+        <div class="feedback-page mb-3">
+            <form class="form-inline my-2 my-lg-0 d-none d-lg-block"
+                  action="{{ '/search'|app }}" method="get">
+                <div class="input-group">
+                    <input type="search" class="form-control form-control-lg" name="q"
+                           placeholder="Article, Character, etc" value="{{ searchResults.query }}">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary btn-lg" type="submit">
+                            <span class="fa fa-search"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container basic-content">
+            {% component 'searchResults' %}
+        </div>
+    </div>
+</div>
