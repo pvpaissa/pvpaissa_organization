@@ -326,13 +326,13 @@ $hr-margin-y:                 $spacer !default;
 $table-cell-padding:          .75rem !default;
 $table-cell-padding-sm:       .3rem !default;
 
-$table-bg:                    transparent !default;
+$table-bg:                    rgba(57, 63, 77, 0.3) !default;
 $table-accent-bg:             rgba($black, .05) !default;
 $table-hover-bg:              rgba($black, .075) !default;
 $table-active-bg:             $table-hover-bg !default;
 
 $table-border-width:          $border-width !default;
-$table-border-color:          $gray-300 !default;
+$table-border-color:          $secondary !default;
 
 $table-head-bg:               $gray-200 !default;
 $table-head-color:            $gray-700 !default;
