@@ -1,8 +1,8 @@
-title = "Frontlines Profile - PvPaissa"
+title = "Frontlines Profile"
 url = "/character/:character/frontlines"
 layout = "basic"
 description = "Frontlines Profile for character."
-meta_title = "Frontlines Profile - PvPaissa"
+meta_title = "Frontlines Profile"
 meta_description = "Frontlines Profile for character."
 is_hidden = 0
 
@@ -12,9 +12,9 @@ character = "{{ :character }}"
 <?php
 function onEnd() {
     if (isset($this['character']->name) && isset($this['character']->server) && isset($this['character']->data_center)) {
-        $this->page->title              = $this['character']->name . ' Frontlines Profile - PvPaissa';
+        $this->page->title              = $this['character']->name . ' Frontlines Profile';
         $this->page->description        = $this['character']->server.' ('.$this['character']->data_center.')';
-        $this->page->meta_title         = $this['character']->name . ' Frontlines Profile - PvPaissa';
+        $this->page->meta_title         = $this['character']->name . ' Frontlines Profile';
         $this->page->meta_description   = $this['character']->server.' ('.$this['character']->data_center.')';
     }
 }

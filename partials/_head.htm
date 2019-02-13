@@ -1,13 +1,16 @@
+{% if this.page.url != '/' %}
+{% set title_brand = " - PvPaissa" %}
+{% endif %}
 <html lang="en">
 <head>
-    <title>{{ this.page.title }}</title>
+    <title>{{ this.page.title }}{{ title_brand }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta name="description" content="{{ this.page.description }}"/>
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ this.controller.currentPageUrl() }}">
-    <meta property="og:title" content="{{ this.page.meta_title }}">
+    <meta property="og:title" content="{{ this.page.meta_title }}{{ title_brand }}">
     <meta property="og:site_name" content="{{ this.page.meta_title }}">
     <meta property="og:description" content="{{ this.page.meta_description }}">
     {% if this.page.open_graph_img %}
