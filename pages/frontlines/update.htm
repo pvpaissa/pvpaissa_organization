@@ -1,0 +1,16 @@
+title = "Frontlines Updater"
+url = "/frontlines/update-with-queues"
+layout = "basic"
+description = "PvPaissa Frontlines Plugin updater."
+meta_title = "Frontlines Updater"
+meta_description = "PvPaissa Frontlines Plugin updater."
+is_hidden = 0
+
+[cleanseSession]
+security = "user"
+allowedUserGroups[] = "paissa"
+
+[cleanseFrontlinesInstall]
+type="update"
+==
+{% component 'cleanseFrontlinesInstall' %}

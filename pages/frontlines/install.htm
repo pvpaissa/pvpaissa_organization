@@ -6,6 +6,11 @@ meta_title = "Frontlines Install"
 meta_description = "PvPaissa Frontlines Plugin Installer."
 is_hidden = 0
 
+[cleanseSession]
+security = "user"
+allowedUserGroups[] = "paissa"
+
 [cleanseFrontlinesInstall]
+type="install"
 ==
 {% component 'cleanseFrontlinesInstall' %}
