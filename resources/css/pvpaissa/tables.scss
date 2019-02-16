@@ -1,0 +1,51 @@
+.pvp-table {
+  .table {
+    display: table;
+    background: rgba($black, .6);
+
+    .thead {
+      display: table-row;
+      background-color: rgba(57, 63, 77, 0.3);
+      font-weight: bold;
+    }
+
+    .tr {
+      display: table-row;
+
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+
+    .thead > span,
+    .tr > span {
+      display: table-cell;
+      padding: 0.75rem;
+      border-top: 1px solid $secondary;
+    }
+
+    .tr > span:nth-child(2) {
+      font-weight: bold;
+    }
+    .tr > span:not(:nth-child(2)) {
+      color: $white;
+    }
+
+    .thead, .tr {
+      &:hover {
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pvp-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}
