@@ -1,0 +1,14 @@
+title = "Weekly Feast Stats"
+url = "/feast/stats/:type?/:mode?/:season?"
+layout = "basic"
+description = "Weekly FFXIV Solo Feast Rankings."
+meta_title = "Weekly Feast Stats"
+meta_description = "Weekly FFXIV Solo Feast Rankings."
+is_hidden = 0
+
+[cleanseFeastStats]
+type = "{{ :type }}"
+mode = "{{ :mode }}"
+season = "{{ :season }}"
+==
+{% component 'cleanseFeastStats' %}
