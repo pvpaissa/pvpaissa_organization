@@ -1,5 +1,5 @@
 title = "Solo Feast Rankings"
-url = "/feast/solo"
+url = "/feast/solo/:season?"
 layout = "basic"
 description = "FFXIV Solo Feast Rankings."
 meta_title = "Solo Feast Rankings"
@@ -7,5 +7,6 @@ meta_description = "FFXIV Solo Feast Rankings."
 is_hidden = 0
 
 [cleanseFeastSolo]
+season = "{{ :season }}"
 ==
 {% component 'cleanseFeastSolo' %}
