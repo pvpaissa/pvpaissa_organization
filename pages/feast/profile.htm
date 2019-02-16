@@ -1,0 +1,24 @@
+title = "Character Profile Feast"
+url = "/character/:character/feast/:season"
+layout = "basic"
+description = "Feast Profile for specified season."
+meta_title = "Character Feast Profile"
+meta_description = "Feast Profile for specified season."
+is_hidden = 0
+
+[cleanseFeastProfile]
+character = "{{ :character }}"
+season = "{{ :season }}"
+==
+<?php
+function onEnd() {
+    if (isset($this['character']->name) && isset($this['character']->server)) {
+        $this->page->title      = $this['character']->name . '\'s Feast Profile';
+        $this->page->meta_title = $this['character']->name . '\'s Feast Profile';
+        $this->page->description = $this['character']->name . ' of ' . $this['character']->server . '\'s feast record.';
+$this->page->meta_description = $this['character']->name . ' of ' . $this['character']->server . '\'s feast record.';
+    }
+}
+?>
+==
+{% component 'cleanseFeastProfile' %}
