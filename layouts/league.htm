@@ -1,0 +1,10 @@
+[cleanseSession]
+security = "all"
+==
+{% if this.page.url != '/league' %}
+{% set title_brand = " - Aether League" %}
+{% endif %}
+
+<title>{{ this.page.title }}{{ title_brand }}</title>
+<meta name="description" content="{{ this.page.description }}">
+{% page %}
