@@ -1,0 +1,26 @@
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="PvPaissa">
+    <meta name="generator" content="PvPaissa">
+    <meta property="og:title" content="{{ this.page.meta_title }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="/plugins/cleanse/worldcup/assets/images/cup-opengraph.jpeg"/>
+    <link rel="icon" type="image/png" href="/plugins/cleanse/worldcup/assets/images/favicon.png"/>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600|PT+Sans+Narrow">
+    {% styles %}
+</head>
+<body>
+{% page %}
+</body>
+</html>
