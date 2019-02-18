@@ -1,0 +1,23 @@
+title = "Team Schedule"
+url = "/league/team/:team/schedule/:season?"
+layout = "league"
+description = "This Team's seasonal schedule."
+meta_title = "Team Schedule"
+meta_description = "This Team's seasonal schedule."
+is_hidden = 0
+
+[cleanseLeagueScheduleTeam]
+slug = "{{ :season }}"
+slug = "{{ :team }}"
+==
+<?php
+function onEnd()
+{
+    if (isset($this['team'])) {
+        $this->page->title = $this->page->meta_title = $this['team']->name . '\'s Schedule';
+        $this->page->description = $this->page->meta_description = 'Seasonal schedule for ' . $this['team']->name;
+    }
+}
+?>
+==
+{% component 'cleanseLeagueScheduleTeam' %}

@@ -1,0 +1,23 @@
+title = "League Stat"
+url = "/league/stat/:stat/:season?"
+layout = "league"
+description = "Aether League Stats"
+meta_title = "Damage Per Second"
+meta_description = "Aether League Stats"
+is_hidden = 0
+
+[cleanseLeagueStat]
+==
+<?php
+function onEnd()
+{
+    if (isset($this['stat'])) {
+        $this->page->title = $this['stat']['title'];
+        $this->page->description = 'The League\'s Leaders in '. $this['stat']['title'];
+        $this->meta_title = $this['stat']['title'];
+        $this->page->meta_description = 'The League\'s Leaders in '. $this['stat']['title'];
+    }
+}
+?>
+==
+{% component 'cleanseLeagueStat' %}

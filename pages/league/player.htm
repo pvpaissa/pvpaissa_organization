@@ -1,0 +1,22 @@
+title = "Player"
+url = "/league/player/:slug"
+layout = "league"
+description = "Aether League Player"
+meta_title = "Player"
+meta_description = "Aether League Player"
+is_hidden = 0
+
+[cleanseLeaguePlayer]
+slug = "{{ :slug }}"
+==
+<?php
+function onEnd()
+{
+    if (isset($this['player'])) {
+        $this->page->title = $this->page->meta_title = $this['player']->name;
+        $this->page->description = $this->page->meta_description = 'Aether League profile for ' . $this['player']->name;
+    }
+}
+?>
+==
+{% component 'cleanseLeaguePlayer' %}

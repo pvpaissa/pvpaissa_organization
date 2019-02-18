@@ -1,0 +1,12 @@
+title = "Standings"
+url = "/league/standings/:season?"
+layout = "league"
+description = "Standings from the current season."
+meta_title = "Standings"
+meta_description = "Standings from the current season."
+is_hidden = 0
+
+[cleanseLeagueStandings]
+slug = "{{ :season }}"
+==
+{% component 'cleanseLeagueStandings' %}

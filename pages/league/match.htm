@@ -1,0 +1,21 @@
+title = "Match"
+url = "/league/match/:match/:spoiler?"
+layout = "league"
+description = "Aether League match."
+meta_title = "Match"
+meta_description = "Aether League match."
+is_hidden = 0
+
+[cleanseLeagueMatch]
+==
+<?php
+function onEnd()
+{
+    if (isset($this['match'])) {
+        $this->page->title = $this->page->meta_title = $this['match']->one->team->name . ' vs ' . $this['match']->two->team->name;
+        $this->page->description = $this->page->meta_description = 'Get a summary of the ' . $this['match']->one->team->name . ' vs. ' . $this['match']->two->team->name . ' feast match.';
+    }
+}
+?>
+==
+{% component 'cleanseLeagueMatch' %}
