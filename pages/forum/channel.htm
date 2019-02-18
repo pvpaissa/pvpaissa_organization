@@ -1,0 +1,22 @@
+title = "Forum Channel"
+url = "/forum/channel/:slug"
+layout = "basic"
+description = "A list of topics in the channel."
+is_hidden = 0
+
+[cleanseForumChannel]
+slug = "{{ :slug }}"
+memberPage = "forum/member"
+topicPage = "forum/topic"
+==
+<?php
+function onEnd()
+{
+    $this->page->title = $this['channel']->title;
+    $this->page->description = $this['channel']->description;
+    $this->meta_title = $this['channel']->title;
+    $this->page->meta_description = $this['channel']->description;
+}
+?>
+==
+{% component 'cleanseForumChannel' %}

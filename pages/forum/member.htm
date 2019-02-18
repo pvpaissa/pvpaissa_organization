@@ -1,0 +1,22 @@
+title = "Forum Member"
+url = "/forum/member/:slug"
+layout = "basic"
+description = "A member of our community."
+is_hidden = 0
+
+[cleanseForumMember]
+slug = "{{ :slug }}"
+channelPage = "forum/channel"
+topicPage = "forum/topic"
+==
+<?php
+function onEnd()
+{
+    $this->page->title = $this['member']->username.'\'s profile.';
+    $this->page->description = $this['member']->username.'\'s profile.';
+    $this->meta_title = $this['member']->username.'\'s profile.';
+    $this->page->meta_description = $this['member']->username.'\'s profile.';
+}
+?>
+==
+{% component 'cleanseForumMember' %}

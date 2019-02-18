@@ -1,0 +1,25 @@
+title = "Forum Topic"
+url = "/forum/topic/:slug"
+layout = "basic"
+description = "A topic in the forum."
+is_hidden = 0
+
+[cleanseForumTopic]
+slug = "{{ :slug }}"
+postsPerPage = 20
+memberPage = "forum/member"
+channelPage = "forum/channel"
+==
+<?php
+function onEnd()
+{
+    if (isset($this['topic'])) {
+        $this->page->title = $this['topic']->subject;
+        $this->page->description = 'A forum topic by '.$this['topic']->start_member->username;
+        $this->meta_title = $this['topic']->subject;
+        $this->page->meta_description = 'A forum topic by '.$this['topic']->start_member->username;
+    }
+}
+?>
+==
+{% component 'cleanseForumTopic' %}
