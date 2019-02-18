@@ -1,0 +1,24 @@
+title = "Character Profile"
+url = "/character/:slug"
+layout = "basic"
+description = "FFXIV PvP profile."
+meta_title = "Character Profile"
+meta_description = "FFXIV PvP profile."
+is_hidden = 0
+
+[cleansePvPaissaProfile]
+slug = "{{ :slug }}"
+==
+<?php
+function onEnd() {
+    $this->page->title = isset($this['character']->name) ? $this['character']->name : '';
+
+    if (isset($this['character']->server) && isset($this['character']->data_center)) {
+        $this->page->description =  $this['character']->server.' ('.$this['character']->data_center.')';
+    } else {
+        $this->page->description = '';
+    }
+}
+?>
+==
+{% component 'cleansePvPaissaProfile' %}
