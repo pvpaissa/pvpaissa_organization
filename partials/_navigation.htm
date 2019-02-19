@@ -98,9 +98,14 @@
                         <a class="nav-link" href="/guides">Guides
                             {% if this.page.url == '/guides' %} <span class="sr-only">(current)</span>{% endif %}</a>
                     </li>
-                    <li class="nav-item{% if this.page.url == '/events' %} active{% endif %}">
-                        <a class="nav-link" href="/events">Events
-                            {% if this.page.url == '/events' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                    <li class="nav-item{% if this.page.url == '/articles/category/news' %} active{% endif %}">
+                        <a class="nav-link" href="/articles/category/news">News
+                            {% if this.page.url == '/articles/category/news' %}
+                            <span class="sr-only">
+                                (current)
+                            </span>
+                            {% endif %}
+                        </a>
                     </li>
                     <li class="nav-item dropdown{% if this.page.url == '/community' %} active{% endif %}">
                         <a class="nav-link dropdown-toggle" href="/community" id="navbarDropdownMenuLink" role="button"
