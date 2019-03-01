@@ -1,0 +1,17 @@
+title = "Broadcast Panel - Rising Stars"
+url = "/broadcast/panel/rising-stars/:id"
+layout = "basic"
+description = "Rising Stars broadcast control panel."
+meta_title = "Broadcast Panel - Rising Stars"
+meta_description = "Rising Stars broadcast control panel."
+is_hidden = 0
+
+[cleanseSession]
+security = "user"
+allowedUserGroups[] = "broadcast-admin"
+redirect = "/"
+
+[cleanseBroadcastPanelRisingStars]
+id = "{{ :id }}"
+==
+{% component 'cleanseBroadcastPanelRisingStars' %}
