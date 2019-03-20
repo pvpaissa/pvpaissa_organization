@@ -1,0 +1,12 @@
+title = "Event"
+url = "/event/:event"
+layout = "basic"
+description = "View event."
+meta_title = "Event"
+meta_description = "View event."
+is_hidden = 0
+
+[cleanseEventViewEvent]
+event = "{{ :event }}"
+==
+{% component 'cleanseEventViewEvent' %}
