@@ -64,15 +64,28 @@
     }
   }
 
+  .guides-gunbreaker {
+    background: linear-gradient(to bottom,
+            rgba(52, 89, 149, 0.3),
+            rgba(52, 89, 149, 0.9)
+    ), url("../images/job-guides/gun.jpg") center center no-repeat;
+
+    &:hover {
+      background: url("../images/job-guides/gun.jpg") center center no-repeat;
+    }
+  }
+
   .guides-paladin .guides-job-abbr,
   .guides-dark-knight .guides-job-abbr,
-  .guides-warrior .guides-job-abbr {
+  .guides-warrior .guides-job-abbr,
+  .guides-gunbreaker .guides-job-abbr {
     text-shadow: #2196F3 1px 0 10px;
   }
 
   .guides-paladin svg,
   .guides-dark-knight svg,
-  .guides-warrior svg {
+  .guides-warrior svg,
+  .guides-gunbreaker svg {
     fill: #4A90E2;
     filter: url("#tankShadow");
   }
@@ -144,6 +157,17 @@
     }
   }
 
+  .guides-dancer {
+    background: linear-gradient(to bottom,
+            rgba(90, 0, 2, 0.3),
+            rgba(90, 0, 2, 0.9)
+    ), url("../images/job-guides/dnc.jpg") center center no-repeat;
+
+    &:hover {
+      background: url("../images/job-guides/dnc.jpg") center center no-repeat;
+    }
+  }
+
   .guides-black-mage {
     background: linear-gradient(to bottom,
             rgba(90, 0, 2, 0.3),
@@ -183,6 +207,7 @@
   .guides-samurai .guides-job-abbr,
   .guides-bard .guides-job-abbr,
   .guides-machinist .guides-job-abbr,
+  .guides-dancer .guides-job-abbr,
   .guides-black-mage .guides-job-abbr,
   .guides-summoner .guides-job-abbr,
   .guides-red-mage .guides-job-abbr {
@@ -195,6 +220,7 @@
   .guides-samurai svg,
   .guides-bard svg,
   .guides-machinist svg,
+  .guides-dancer svg,
   .guides-black-mage svg,
   .guides-summoner svg,
   .guides-red-mage svg {
@@ -264,8 +290,8 @@
 
 @media screen and (max-width: 575px) {
   .guides-job {
-    height: 175px;
-    width: 175px;
+    height: 225px;
+    width: 225px;
   }
 }
 
