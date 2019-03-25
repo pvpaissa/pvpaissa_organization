@@ -6,6 +6,11 @@ meta_title = "Edit Event"
 meta_description = "Edit your event."
 is_hidden = 0
 
+[cleanseSession]
+security = "user"
+allowedUserGroups[] = "event-admin"
+redirect = "/"
+
 [cleanseEventEditEvent]
 event = "{{ :event }}"
 ==

@@ -1,0 +1,16 @@
+title = "Manage Events"
+url = "/events/manage"
+layout = "basic"
+description = "Manage your website's events."
+meta_title = "Manage Events"
+meta_description = "Manage your website's events."
+is_hidden = 0
+
+[cleanseSession]
+security = "user"
+allowedUserGroups[] = "event-admin"
+redirect = "/"
+
+[cleanseEventManageEvents]
+==
+{% component 'cleanseEventManageEvents' %}

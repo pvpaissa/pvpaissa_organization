@@ -6,6 +6,11 @@ meta_title = "Create Event"
 meta_description = "Create an event."
 is_hidden = 0
 
+[cleanseSession]
+security = "user"
+allowedUserGroups[] = "event-admin"
+redirect = "/"
+
 [cleanseEventCreateEvent]
 ==
 {% component 'cleanseEventCreateEvent' %}

@@ -1,0 +1,17 @@
+title = "Team Placement"
+url = "/event/:event/placement"
+layout = "basic"
+description = "View event."
+meta_title = "Team Placement"
+meta_description = "View event."
+is_hidden = 0
+
+[cleanseSession]
+security = "user"
+allowedUserGroups[] = "event-admin"
+redirect = "/"
+
+[cleanseEventTeamPlacement]
+event = "{{ :event }}"
+==
+{% component 'cleanseEventTeamPlacement' %}
