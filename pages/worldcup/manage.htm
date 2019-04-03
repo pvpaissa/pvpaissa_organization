@@ -1,0 +1,16 @@
+title = "Manage Recruitment Board - The Feast World Cup"
+url = "/world-cup/recruits/manage"
+layout = "cup"
+description = "Manage potential recruits for The Feast World Cup."
+meta_title = "Manage Recruitment Board"
+meta_description = "Manage potential recruits for The Feast World Cup."
+is_hidden = 0
+
+[cleanseSession]
+security = "user"
+allowedUserGroups[] = "cup-admin"
+redirect = "/world-cup"
+
+[cleanseCupManageRecruits]
+==
+{% component 'cleanseCupManageRecruits' %}
