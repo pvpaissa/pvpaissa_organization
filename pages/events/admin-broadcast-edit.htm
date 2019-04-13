@@ -1,0 +1,17 @@
+title = "Edit Event Broadcast"
+url = "/event/broadcast/:broadcast"
+layout = "basic"
+description = "Edit your event broadcast."
+meta_title = "Edit Event Broadcast"
+meta_description = "Edit your event broadcast."
+is_hidden = 0
+
+[cleanseSession]
+security = "user"
+allowedUserGroups[] = "event-admin"
+redirect = "/"
+
+[cleanseEventAdminBroadcast]
+broadcast = "{{ :broadcast }}"
+==
+{% component 'cleanseEventAdminBroadcast' %}
