@@ -1,5 +1,5 @@
 title = "Team Placement"
-url = "/event/:event/placement"
+url = "/event/:event/seeding"
 layout = "basic"
 description = "View event."
 meta_title = "Team Placement"
@@ -11,7 +11,7 @@ security = "user"
 allowedUserGroups[] = "event-admin"
 redirect = "/"
 
-[cleanseEventAdminPlacement]
+[cleanseEventAdminSeeding]
 event = "{{ :event }}"
 ==
-{% component 'cleanseEventAdminPlacement' %}
+{% component 'cleanseEventAdminSeeding' %}
