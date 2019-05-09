@@ -1,6 +1,6 @@
 title = "OBS Overlay: Score - PvPaissa"
 description = "Score overlay for a PvPaissa Event."
-url = "/event/broadcast/:id/score"
+url = "/event/broadcast/:id/score/:language?"
 layout = "broadcast"
 meta_title = "PvPaissa OBS Score Overlay"
 meta_description = "Score overlay for a PvPaissa Event."
@@ -8,5 +8,6 @@ is_hidden = 0
 
 [cleanseEventOverlayScore]
 id = "{{ :id }}"
+language = "{{ :language }}"
 ==
 {% component 'cleanseEventOverlayScore' %}

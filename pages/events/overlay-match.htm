@@ -1,6 +1,6 @@
 title = "Match Overlay"
 description = "Match overlay."
-url = "/event/broadcast/:id/match"
+url = "/event/broadcast/:id/match/:language?"
 layout = "broadcast"
 meta_title = "Match Overlay"
 meta_description = "Match overlay."
@@ -8,5 +8,6 @@ is_hidden = 0
 
 [cleanseEventOverlayMatch]
 id = "{{ :id }}"
+language = "{{ :language }}"
 ==
 {% component 'cleanseEventOverlayMatch' %}

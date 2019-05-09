@@ -1,0 +1,13 @@
+title = "OBS Overlay: Team Names - PvPaissa"
+description = "Event team name overlay for a PvPaissa Event."
+url = "/event/broadcast/:id/teams/:team"
+layout = "broadcast"
+meta_title = "OBS Overlay Event Team Names"
+meta_description = "Event team names overlay for a PvPaissa Event."
+is_hidden = 0
+
+[cleanseEventOverlayTeamNames]
+id = "{{ :id }}"
+team = "{{ :team }}"
+==
+{% component 'cleanseEventOverlayTeamNames' %}
