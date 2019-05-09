@@ -1,6 +1,6 @@
 title = "OBS Overlay: Event Type - PvPaissa"
 description = "Event type overlay for a PvPaissa Event."
-url = "/event/broadcast/:id/groups"
+url = "/event/broadcast/:id/groups/:group?"
 layout = "broadcast"
 meta_title = "OBS Overlay Event Type"
 meta_description = "Event type overlay for a PvPaissa Event."
@@ -8,5 +8,6 @@ is_hidden = 0
 
 [cleanseEventOverlayGroups]
 id = "{{ :id }}"
+group = "{{ :group }}"
 ==
 {% component 'cleanseEventOverlayGroups' %}
