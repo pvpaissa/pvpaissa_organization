@@ -1,0 +1,16 @@
+title = "Manage FWC Teams and Players - The Feast World Cup"
+url = "/world-cup/setup"
+layout = "cup"
+description = "Manage team and player lists for The Feast World Cup."
+meta_title = "Manage FWC Teams and Players"
+meta_description = "Manage team and player lists for The Feast World Cup."
+is_hidden = 0
+
+[cleanseSession]
+security = "user"
+allowedUserGroups[] = "cup-admin"
+redirect = "/world-cup"
+
+[cleanseCupSetup]
+==
+{% component 'cleanseCupSetup' %}

@@ -1,0 +1,16 @@
+title = "Manage World Cup Prize"
+url = "/world-cup/manage-prize"
+layout = "basic"
+description = "Manage the World Cup prize."
+meta_title = "Manage World Cup Prize"
+meta_description = "Manage the World Cup prize."
+is_hidden = 0
+
+[cleanseSession]
+security = "user"
+allowedUserGroups[] = "event-admin"
+redirect = "/"
+
+[cleanseCupAdminPrize]
+==
+{% component 'cleanseCupAdminPrize' %}

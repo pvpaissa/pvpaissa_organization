@@ -1,0 +1,15 @@
+title = "OBS Overlay: Prize - PvPaissa"
+description = "Prize overlay for a PvPaissa Event."
+url = "/event/broadcast/prize"
+layout = "broadcast"
+meta_title = "PvPaissa OBS Prize Overlay"
+meta_description = "Prize overlay for a PvPaissa Event."
+is_hidden = 0
+==
+function onStart()
+{
+    $this->addCss('/plugins/cleanse/event/assets/css/overlay.css');
+    $this->addJs('/plugins/cleanse/event/assets/js/overlay.js');
+}
+==
+{% content "world-cup-prize.htm" %}
