@@ -22,16 +22,16 @@
 .category-group-item {
   position: relative;
   display: block;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem;
   margin-bottom: -$list-group-border-width;
   width: 100%;
   color: $white;
   text-align: inherit;
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
 
   @include hover-focus {
     color: $primary;
-    border-left: 1px solid $primary;
+    border-right: 1px solid $primary;
   }
 
   &:active,
