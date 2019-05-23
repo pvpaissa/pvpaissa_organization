@@ -118,6 +118,12 @@
                             <a class="dropdown-item" href="/podcasts">Podcasts</a>
                         </div>
                     </li>
+
+                    <li class="nav-item{% if this.page.url == '/recruitment' %} active{% endif %}">
+                        <a class="nav-link" href="/recruitment">Recruitment Board
+                            {% if this.page.url == '/recruitment' %} <span class="sr-only">(current)</span>{% endif %}
+                        </a>
+                    </li>
                 </ul>
 
                 <div class="navbar-nav social-nav mt-2 mt-md-0">

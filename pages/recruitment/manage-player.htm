@@ -1,0 +1,15 @@
+title = "Recruitment - Manage Player"
+url = "/recruitment/player/:slug/manage"
+layout = "basic"
+description = "Manage a player for the recruitment board."
+meta_title = "Manage Player"
+meta_description = "Manage your character for the recruitment board."
+is_hidden = 0
+
+[cleanseSession]
+security = "user"
+redirect = "/recruitment"
+
+[cleanseRecruitmentManagePlayer]
+==
+{% component 'cleanseRecruitmentManagePlayer' %}

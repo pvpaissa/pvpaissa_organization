@@ -1,0 +1,15 @@
+title = "Recruitment - Manage Team"
+url = "/recruitment/team/:slug/manage"
+layout = "basic"
+description = "Manage a team for the recruitment board."
+meta_title = "Manage Team"
+meta_description = "Manage your team for the recruitment board."
+is_hidden = 0
+
+[cleanseSession]
+security = "user"
+redirect = "/recruitment"
+
+[cleanseRecruitmentManageTeam]
+==
+{% component 'cleanseRecruitmentManageTeam' %}

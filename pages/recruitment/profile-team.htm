@@ -1,0 +1,14 @@
+title = "Team Profile"
+url = "/recruitment/team/:slug"
+layout = "basic"
+description = "Recruitment Board team profile."
+meta_title = "Team Profile"
+meta_description = "Recruitment Board Team."
+is_hidden = 0
+
+[cleanseRecruitmentReport]
+
+[cleanseRecruitmentProfileTeam]
+slug = "{{ :slug }}"
+==
+{% component 'cleanseRecruitmentProfileTeam' %}

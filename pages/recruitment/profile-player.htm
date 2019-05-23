@@ -1,0 +1,14 @@
+title = "Player Profile"
+url = "/recruitment/player/:character"
+layout = "basic"
+description = "Recruitment Board player profile."
+meta_title = "Player Profile"
+meta_description = "Recruitment Board Player."
+is_hidden = 0
+
+[cleanseRecruitmentReport]
+
+[cleanseRecruitmentProfilePlayer]
+slug = "{{ :character }}"
+==
+{% component 'cleanseRecruitmentProfilePlayer' %}
