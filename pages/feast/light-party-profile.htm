@@ -1,0 +1,24 @@
+title = "Light Party Team Profile"
+url = "/light-party/profile/:lodestone/:season?"
+layout = "basic"
+description = "FFXIV Light Party Team Feast Rankings."
+meta_title = "Light Party Team Rankings"
+meta_description = "FFXIV Light Party Team Feast Rankings."
+is_hidden = 0
+
+[cleanseFeastPartyProfile]
+season = "{{ :lodestone }}"
+season = "{{ :season }}"
+==
+<?php
+function onEnd() {
+    if (isset($this['lp']->name) && isset($this['lp']->dc_group)) {
+        $this->page->title            = $this['lp']->name . '\'s Feast Profile';
+        $this->page->meta_title       = $this['lp']->name;
+        $this->page->description      = $this['lp']->name . ' of ' . $this['lp']->dc_group . '\'s feast record.';
+        $this->page->meta_description = $this['lp']->name . ' of ' . $this['lp']->dc_group;
+    }
+}
+?>
+==
+{% component 'cleanseFeastPartyProfile' %}
